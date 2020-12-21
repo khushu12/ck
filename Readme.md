@@ -27,7 +27,7 @@ This would run the app in below desired cases
 
 ### Logs are located in the log folder
 Where every order is logged and you can check current order and mean of total orders/ order wait time/courier wait time
-
+> Sample log and csv file are attached in the logs folder
 
 
 ### Optional for visualization
