@@ -1,10 +1,11 @@
 import unittest
 from orders import Order
+from datetime import datetime, timedelta
 
 from mt_list import MTList
 
 from cook import Cook
-
+from courier import Courier
 
 class Testing(unittest.TestCase):
     def setUp(self):
@@ -12,13 +13,11 @@ class Testing(unittest.TestCase):
         cooking = MTList()
         cooking.put(self.o)
         self.c = Cook(MTList() , cooking)
+        self.courier=Courier(self.o)
 
-    def test_cook_order(self):
-        self.c.cook_order()
-        self.assertEqual(self.o,self.c.get_delivery_queue().get())
 
-    def test_get_order(self):
-        self.assertIsInstance(self.c.get_order(),Order)
+    def test_arrival_time(self):
+        self.assertEqual(self.courier.get_order_details(self.o)[0],self.o.order_wait_time)
 
 if __name__ == '__main__':
     unittest.main()
