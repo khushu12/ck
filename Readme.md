@@ -38,6 +38,17 @@ These files are read by plottting and a realtime mean courier wait and mean orde
 
 `python3 plotting Matched`
 
+### Testing
+
+For running all unit test
+
+`python -m unittest discover -p 'test*'`
+
+For running single test 
+
+`python -m unittest <filename(without.py)>`
+
+`python -m unittest test_reception`
 
 ### Whole Picture:
 
